@@ -10,11 +10,14 @@ import { defineComponent } from "vue"
 
 // 要让 TypeScript 正确推断 Vue 组件选项中的类型，需要使用 defineComponent 全局方法定义组件
 export default defineComponent({
-  
   data() {
     return {
       theme: 'light'
     }
+  },
+  created() {
+    this.theme = 'dark' // 赋值操作
+    this.fetchInitData() // 页面渲染前获取数据
   },
   methods: {
     toggleBackground(): void {
@@ -25,8 +28,11 @@ export default defineComponent({
         case 'dark':
           this.theme = 'light'
       }
+    },
+    fetchInitData(): void {
+
     }
-  },
+  }
 })
 </script>
 <style lang="css" scoped>

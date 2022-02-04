@@ -3,12 +3,16 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import ChangeColor from './components/ChangeColor.vue';
+import TemplateSyntax from './components/TemplateSyntax.vue';
+import DynamicProp from './components/DynamicProp.vue';
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <ChangeColor />
+  <TemplateSyntax />
+  <DynamicProp />
 </template>
 
 <style>

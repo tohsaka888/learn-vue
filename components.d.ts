@@ -5,8 +5,10 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ChangeColor: typeof import('./src/components/ChangeColor.vue')['default']
+    DynamicProp: typeof import('./src/components/DynamicProp.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    TemplateSyntax: typeof import('./src/components/TemplateSyntax.vue')['default']
   }
 }
 
