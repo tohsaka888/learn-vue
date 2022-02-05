@@ -5,10 +5,12 @@
 </template>
 <script lang="ts">import { defineComponent } from "vue";
 import _ from 'lodash'
+
+type DebouncedClickFunc = (...args: any) => void
 export default defineComponent({
   data() {
     return {
-      debouncedClick: null as any
+      debouncedClick: new Function as DebouncedClickFunc
     }
   },
   created() {
