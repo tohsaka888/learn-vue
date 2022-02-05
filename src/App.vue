@@ -5,6 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import ChangeColor from './components/ChangeColor.vue';
 import TemplateSyntax from './components/TemplateSyntax.vue';
 import DynamicProp from './components/DynamicProp.vue';
+import DebouncingExample from './components/DebouncingExample.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import DynamicProp from './components/DynamicProp.vue';
   <ChangeColor />
   <TemplateSyntax />
   <DynamicProp />
+  <DebouncingExample />
 </template>
 
 <style>
