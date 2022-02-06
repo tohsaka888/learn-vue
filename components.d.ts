@@ -8,6 +8,8 @@ declare module 'vue' {
     DebouncingExample: typeof import('./src/components/DebouncingExample.vue')['default']
     DynamicProp: typeof import('./src/components/DynamicProp.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElRow: typeof import('element-plus/es')['ElRow']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     TemplateSyntax: typeof import('./src/components/TemplateSyntax.vue')['default']
   }
