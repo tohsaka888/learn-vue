@@ -4,7 +4,7 @@ import DebouncingExample from "../src/components/DebouncingExample.vue";
 import DynamicProp from "../src/components/DynamicProp.vue";
 import HelloWorld from "../src/components/HelloWorld.vue";
 import TemplateSyntax from "../src/components/TemplateSyntax.vue";
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
