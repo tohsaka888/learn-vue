@@ -7,11 +7,15 @@ const router = useRouter()
 const linkTo = (path: string) => {
   router.push(path)
 }
+const isMobile = () => {
+  let flag = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+  return !!flag;
+}
 </script>
 
 <template>
   <el-row style="margin: 36px 24px;" :gutter="20">
-    <el-col :span="6" v-for="item in catalogue">
+    <el-col :span="isMobile() ? 24 : 6" v-for="item in catalogue">
       <div class="flex container">
         <el-button type="primary" :icon="Right" circle @click="linkTo(item.path)" />
         <div @click="linkTo(item.path)" class="title">{{ item.title }}</div>
