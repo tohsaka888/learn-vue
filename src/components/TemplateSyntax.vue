@@ -7,7 +7,9 @@
     >{{ disabled ? 'disbled' : 'un-disabled' }}</el-button>
   </div>
 </template>
-<script lang="ts">import { defineComponent } from "vue"
+<script lang="ts">
+
+import { defineComponent } from "vue"
 
 export default defineComponent({
   data() {
