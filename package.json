@@ -12,7 +12,8 @@
     "lodash": "^4.17.21",
     "unplugin-auto-import": "^0.5.11",
     "unplugin-vue-components": "^0.17.15",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

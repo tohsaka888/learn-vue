@@ -15,7 +15,7 @@ export default defineComponent({
       // 点击后触发事件为mouseover
       this.event = 'mouseover'
     }
-  }
+  },
 })
 </script>
 <style lang="css">

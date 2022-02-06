@@ -6,11 +6,11 @@
 <script lang="ts">import { defineComponent } from "vue";
 import _ from 'lodash'
 
-type DebouncedClickFunc = (...args: any) => void
+// type DebouncedClickFunc = (...args: any) => void
 export default defineComponent({
   data() {
     return {
-      debouncedClick: new Function as DebouncedClickFunc
+      debouncedClick: new Function as _.DebouncedFunc<() => void>
     }
   },
   created() {
@@ -20,6 +20,9 @@ export default defineComponent({
     click() {
       console.log('clicked')
     }
+  },
+  unmounted() {
+    this.debouncedClick.cancel()
   },
 })
 </script>

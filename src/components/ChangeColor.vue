@@ -10,6 +10,7 @@ import { defineComponent } from "vue"
 
 // 要让 TypeScript 正确推断 Vue 组件选项中的类型，需要使用 defineComponent 全局方法定义组件
 export default defineComponent({
+  name: 'ChangeColor',
   data() {
     return {
       theme: 'light'

@@ -6,15 +6,19 @@ import ChangeColor from './components/ChangeColor.vue';
 import TemplateSyntax from './components/TemplateSyntax.vue';
 import DynamicProp from './components/DynamicProp.vue';
 import DebouncingExample from './components/DebouncingExample.vue';
+// import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <ChangeColor />
-  <TemplateSyntax />
-  <DynamicProp />
-  <DebouncingExample />
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+    <ChangeColor />
+    <TemplateSyntax />
+    <DynamicProp />
+    <DebouncingExample />
+    <router-view />
+  </div>
 </template>
 
 <style>
