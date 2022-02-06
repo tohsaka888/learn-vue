@@ -1,52 +1,39 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { catalogue } from './catalogue'
+import { Right } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router';
 
-defineProps<{ msg?: string }>()
-
-const count = ref(0)
+const router = useRouter()
+const linkTo = (path: string) => {
+  router.push(path)
+}
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <el-row style="margin-top: 36px; width: 100%;">
+    <el-col :span="6" v-for="item in catalogue">
+      <div class="flex">
+        <el-button type="primary" :icon="Right" circle @click="linkTo(item.path)" />
+        <div @click="linkTo(item.path)" class="title">{{ item.title }}</div>
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
+.title {
+  font-size: 1.2rem;
+  margin-left: 16px;
+  cursor: pointer;
 }
 
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
+.title:hover {
+  text-decoration: underline;
 }
 </style>
