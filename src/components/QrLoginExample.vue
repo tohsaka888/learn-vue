@@ -65,7 +65,7 @@ onUnmounted(() => {
 
 <style scoped>
 .info {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
