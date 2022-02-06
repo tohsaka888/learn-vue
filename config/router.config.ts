@@ -1,18 +1,18 @@
 // 导入组件
-
-import ChangeColor from "@/components/ChangeColor.vue";
-import DebouncingExample from "@/components/DebouncingExample.vue";
-import DynamicProp from "@/components/DynamicProp.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
-import TemplateSyntax from "@/components/TemplateSyntax.vue";
-import App from "@/App.vue";
-import { createApp } from "vue";
+import ChangeColor from "../src/components/ChangeColor.vue";
+import DebouncingExample from "../src/components/DebouncingExample.vue";
+import DynamicProp from "../src/components/DynamicProp.vue";
+import HelloWorld from "../src/components/HelloWorld.vue";
+import TemplateSyntax from "../src/components/TemplateSyntax.vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
   {
+    path: "/",
+    component: HelloWorld,
+  },
+  {
     path: "/change-color",
-    name: "ChangeColor",
     component: ChangeColor,
   },
   {
@@ -38,8 +38,4 @@ const router = createRouter({
   routes,
 });
 
-const app = createApp(App);
-
-app.use(router);
-
-app.mount("#app");
+export default router;

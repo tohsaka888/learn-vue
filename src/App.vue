@@ -10,15 +10,8 @@ import DebouncingExample from './components/DebouncingExample.vue';
 </script>
 
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-    <ChangeColor />
-    <TemplateSyntax />
-    <DynamicProp />
-    <DebouncingExample />
-    <router-view />
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <router-view />
 </template>
 
 <style>
