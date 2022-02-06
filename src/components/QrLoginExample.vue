@@ -7,7 +7,7 @@
 </template>
   
 <script setup lang='ts'>
-import { onUnmounted, ref } from 'vue';
+import { onUnmounted, ref, watch } from 'vue';
 import { baseUrl } from '../../config/baseUrl'
 
 const qrkey = ref<string>('')
@@ -38,13 +38,24 @@ const checkQrStatus = async () => {
   qrStatus.value = data.message
 }
 
-createQrKey().then(() => {
+// 方式1 Promise
+// createQrKey().then(() => {
+//   createQrImage()
+//   intervalId.value = window.setInterval(() => {
+//     checkQrStatus()
+//   }, 3000)
+// })
+
+// 方式2 监听器
+createQrKey()
+watch(qrkey, () => {
   createQrImage()
+  intervalId.value = window.setInterval(() => {
+    checkQrStatus()
+  }, 3000)
 })
 
-intervalId.value = window.setInterval(() => {
-  checkQrStatus()
-}, 3000)
+
 
 // 卸载定时器
 onUnmounted(() => {
