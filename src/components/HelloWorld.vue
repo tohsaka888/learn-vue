@@ -10,9 +10,9 @@ const linkTo = (path: string) => {
 </script>
 
 <template>
-  <el-row style="margin-top: 36px; width: 100%;">
+  <el-row style="margin: 36px 24px;" :gutter="20">
     <el-col :span="6" v-for="item in catalogue">
-      <div class="flex">
+      <div class="flex container">
         <el-button type="primary" :icon="Right" circle @click="linkTo(item.path)" />
         <div @click="linkTo(item.path)" class="title">{{ item.title }}</div>
       </div>
@@ -23,8 +23,9 @@ const linkTo = (path: string) => {
 <style scoped>
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .title {
@@ -35,5 +36,12 @@ const linkTo = (path: string) => {
 
 .title:hover {
   text-decoration: underline;
+}
+
+.container {
+  background-color: #f5f4f4;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 10px #cecece;
 }
 </style>

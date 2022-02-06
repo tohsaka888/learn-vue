@@ -11,6 +11,7 @@ declare module 'vue' {
     ElCol: typeof import('element-plus/es')['ElCol']
     ElRow: typeof import('element-plus/es')['ElRow']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    QrLoginExample: typeof import('./src/components/QrLoginExample.vue')['default']
     TemplateSyntax: typeof import('./src/components/TemplateSyntax.vue')['default']
   }
 }

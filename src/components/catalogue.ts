@@ -25,4 +25,9 @@ export const catalogue: Catalogue[] = [
     date: "2022-2-5",
     path: "/debouncing-example",
   },
+  {
+    title: "扫描二维码登录实例",
+    date: "2022-2-6",
+    path: "/qrlogin-example",
+  },
 ];
