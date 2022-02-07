@@ -30,4 +30,14 @@ export const catalogue: Catalogue[] = [
     date: "2022-2-6",
     path: "/qrlogin-example",
   },
+  {
+    title: "计算属性",
+    date: "2022-2-7",
+    path: "/computed-properties",
+  },
+  {
+    title: "监听器",
+    date: "2022-2-7",
+    path: "/watchers",
+  },
 ];

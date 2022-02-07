@@ -5,6 +5,7 @@ import DynamicProp from "../src/components/DynamicProp.vue";
 import HelloWorld from "../src/components/HelloWorld.vue";
 import TemplateSyntax from "../src/components/TemplateSyntax.vue";
 import QrLoginExample from "../src/components/QrLoginExample.vue";
+import ComputedProperties from "../src/components/ComputedProperties.vue";
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
@@ -35,6 +36,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/qrlogin-example",
     component: QrLoginExample,
+  },
+  {
+    path: "/computed-properties",
+    component: ComputedProperties,
   },
 ];
 
