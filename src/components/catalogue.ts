@@ -38,6 +38,6 @@ export const catalogue: Catalogue[] = [
   {
     title: "监听器",
     date: "2022-2-7",
-    path: "/watchers",
+    path: "/watcher",
   },
 ];
