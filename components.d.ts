@@ -5,10 +5,12 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ChangeColor: typeof import('./src/components/ChangeColor.vue')['default']
+    ComputedProperties: typeof import('./src/components/ComputedProperties.vue')['default']
     DebouncingExample: typeof import('./src/components/DebouncingExample.vue')['default']
     DynamicProp: typeof import('./src/components/DynamicProp.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElRow: typeof import('element-plus/es')['ElRow']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     QrLoginExample: typeof import('./src/components/QrLoginExample.vue')['default']
