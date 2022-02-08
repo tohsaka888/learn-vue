@@ -15,12 +15,20 @@ const qrimgUrl = ref<string>('')
 const intervalId = ref<number>(0)
 const qrStatus = ref<string>('')
 
+/**
+ * 创建二维码key
+ * @returns {any}
+ */
 const createQrKey = async () => {
   const res = await fetch(`${baseUrl}/login/qr/key`)
   const data = await res.json()
   qrkey.value = data.data.unikey
 }
 
+/**
+ * 创建二维码
+ * @returns {any}
+ */
 const createQrImage = async () => {
   if (qrkey.value !== '') {
     const res = await fetch(`${baseUrl}/login/qr/create?key=${qrkey.value}&qrimg=true`)
@@ -29,6 +37,10 @@ const createQrImage = async () => {
   }
 }
 
+/**
+ * 检验二维码状态
+ * @returns {any}
+ */
 const checkQrStatus = async () => {
   const res = await fetch(`${baseUrl}/login/qr/check?key=${qrkey.value}`)
   const data = await res.json()
@@ -48,6 +60,7 @@ const checkQrStatus = async () => {
 
 // 方式2 监听器
 createQrKey()
+
 watch(qrkey, () => {
   createQrImage()
   intervalId.value = window.setInterval(() => {

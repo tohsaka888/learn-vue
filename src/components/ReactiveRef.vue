@@ -50,7 +50,11 @@ watch(books, () => {
 // computed
 const booksNumber = computed(() => books.length)
 
-const addNewBook = () => {
+/**
+ * 深拷贝newBook
+ * @returns {any}
+ */
+const addNewBook = (): void => {
   books.push(_.cloneDeep(newBook))
 }
 
