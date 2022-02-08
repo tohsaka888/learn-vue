@@ -9,7 +9,14 @@
       <el-button @click="addNewBook">添加</el-button>
     </div>
     <div class="info">显示机战标签书籍</div>
-    <div class="result">{{ isFight.map(item => item.name) }}</div>
+    <!-- <div class="result">{{ isFight.map(item => item.name) }}</div> -->
+    <div
+      style="display: flex;justify-content: center;align-items: center;"
+      v-for="(book, index) in isFight"
+    >
+      <div id="index">{{ index + 1 }}.</div>
+      <div class="result" v-for="(value, key) in book">{{ key }}:{{ value }}//</div>
+    </div>
   </div>
 </template>
 <script lang="ts">

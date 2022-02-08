@@ -3,7 +3,9 @@
     <el-button type="primary" @click="debouncedClick">click</el-button>
   </div>
 </template>
-<script lang="ts">import { defineComponent } from "vue";
+<script lang="ts">
+
+import { defineComponent } from "vue";
 import _ from 'lodash'
 
 // type DebouncedClickFunc = (...args: any) => void
