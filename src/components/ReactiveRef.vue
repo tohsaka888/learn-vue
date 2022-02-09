@@ -13,6 +13,9 @@
     <div class="count">库存数量: {{ booksNumber }}</div>
     <div class="count">库存数量: {{ inventory }}</div>
   </div>
+  <template v-for="(book, index) in books">
+    <component-basis :book="book" :index="index" intro="book" />
+  </template>
 </template>
   
 <script setup lang='ts'>
