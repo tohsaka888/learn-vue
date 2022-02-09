@@ -10,11 +10,11 @@
     </div>
   </div>
   <div class="mt24">
-    <div class="count">库存数量: {{ booksNumber }}</div>
-    <div class="count">库存数量: {{ inventory }}</div>
+    <div class="count" :style="{ fontSize: fontSize + 'rem' }">库存数量: {{ booksNumber }}</div>
+    <div class="count" :style="{ fontSize: fontSize + 'rem' }">库存数量: {{ inventory }}</div>
   </div>
   <template v-for="(book, index) in books">
-    <component-basis :book="book" :index="index" intro="book" />
+    <component-basis :book="book" :index="index" intro="book" @enlarge-text="enlargeText" />
   </template>
 </template>
   
@@ -24,6 +24,7 @@ import _ from 'lodash';
 import { computed, reactive, ref, watch } from 'vue';
 
 const options: string[] = ['奇幻', '日常', '机战']
+const fontSize = ref<number>(1)
 
 type Book = {
   name: string;
@@ -59,6 +60,14 @@ const booksNumber = computed(() => books.length)
  */
 const addNewBook = (): void => {
   books.push(_.cloneDeep(newBook))
+}
+
+/**
+ * 放大字体
+ * @returns {any}
+ */
+const enlargeText = () => {
+  fontSize.value++
 }
 
 </script>

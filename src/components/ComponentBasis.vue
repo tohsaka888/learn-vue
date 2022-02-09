@@ -1,4 +1,5 @@
 <template>
+  <el-button type="primary" @click="$emit('enlargeText')">Enlarge</el-button>
   <div class="container flex">
     <div class="index">{{ index }}</div>
     <div class="info" v-for="(value, key) in book">{{ key }} -> {{ value }}</div>
@@ -11,6 +12,7 @@ import { defineComponent, PropType } from "vue";
 import { Book } from "./BookType";
 
 export default defineComponent({
+  emits: ['enlargeText'],
   props: {
     intro: String,
     book: {
