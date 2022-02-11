@@ -66,8 +66,8 @@ const addNewBook = (): void => {
  * 放大字体
  * @returns {any}
  */
-const enlargeText = () => {
-  fontSize.value++
+const enlargeText = (enlargeNum: number) => {
+  fontSize.value+= enlargeNum
 }
 
 </script>
