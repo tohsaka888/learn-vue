@@ -45,4 +45,9 @@ export const catalogue: Catalogue[] = [
     date: "2022-2-8",
     path: "/reactive-ref",
   },
+  {
+    title: "插槽",
+    date: "2022-2-15",
+    path: "/slot-example",
+  },
 ];

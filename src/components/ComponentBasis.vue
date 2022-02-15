@@ -45,7 +45,7 @@ export default defineComponent({
 }
 
 .index {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
 }
 

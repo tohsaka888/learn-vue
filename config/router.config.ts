@@ -8,6 +8,7 @@ import QrLoginExample from "../src/components/QrLoginExample.vue";
 import ComputedProperties from "../src/components/ComputedProperties.vue";
 import Watcher from "../src/components/Watcher.vue";
 import ReactiveRef from "../src/components/ReactiveRef.vue";
+import SlotExample from "../src/components/SlotExample.vue"
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
@@ -50,6 +51,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/reactive-ref',
     component: ReactiveRef
+  },
+  {
+    path: '/slot-example',
+    component: SlotExample
   }
 ];
 

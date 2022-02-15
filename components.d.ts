@@ -18,6 +18,8 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     QrLoginExample: typeof import('./src/components/QrLoginExample.vue')['default']
     ReactiveRef: typeof import('./src/components/ReactiveRef.vue')['default']
+    Slot: typeof import('./src/components/Slot.vue')['default']
+    SlotExample: typeof import('./src/components/SlotExample.vue')['default']
     TemplateSyntax: typeof import('./src/components/TemplateSyntax.vue')['default']
     Watcher: typeof import('./src/components/Watcher.vue')['default']
   }
