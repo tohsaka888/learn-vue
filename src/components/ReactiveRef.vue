@@ -16,12 +16,14 @@
   <template v-for="(book, index) in books">
     <component-basis :book="book" :index="index" intro="book" @enlarge-text="enlargeText" />
   </template>
+  <div ref="divRef">{{ state.count }}</div>
+  <el-button @click="increment">increment</el-button>
 </template>
   
 <script setup lang='ts'>
 
 import _ from 'lodash';
-import { computed, reactive, ref, watch } from 'vue';
+import { computed, nextTick, reactive, ref, watch } from 'vue';
 
 const options: string[] = ['奇幻', '日常', '机战']
 const fontSize = ref<number>(1)
@@ -41,9 +43,32 @@ const newBook = reactive<Book>({
 // 字符串等字面值使用Ref
 const inventory = ref<number>(0)
 
-// 对象数组使用Reactive
-const books = reactive<Book[]>([])
 
+const divRef = ref<HTMLDivElement>()
+// 对象数组使用Reactive
+// 不推荐的写法
+// const books = reactive<Book[]>([])
+
+// 推荐的写法
+const books: Book[] = reactive([])
+
+const state: { count: number } = reactive({ count: 0 })
+
+const increment = () => {
+  let id = setInterval(() => {
+    state.count++
+    // 0, 1, 2, 3, 4
+    console.log(divRef.value?.innerHTML)
+    // 获取更新后的DOM
+    nextTick(() => {
+      // 1, 2, 3, 4, 5
+      console.log(divRef.value?.innerHTML)
+    })
+    if (state.count === 5) {
+      clearInterval(id)
+    }
+  }, 1000)
+}
 
 // watch
 watch(books, () => {
@@ -67,7 +92,7 @@ const addNewBook = (): void => {
  * @returns {any}
  */
 const enlargeText = (enlargeNum: number) => {
-  fontSize.value+= enlargeNum
+  fontSize.value += enlargeNum
 }
 
 </script>
