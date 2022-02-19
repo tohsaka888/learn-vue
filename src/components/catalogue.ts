@@ -50,4 +50,9 @@ export const catalogue: Catalogue[] = [
     date: "2022-2-15",
     path: "/slot-example",
   },
+  {
+    title: 'vue3组合式API计算属性',
+    date: '2022-2-18',
+    path: '/vue3-computed'
+  }
 ];

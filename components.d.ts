@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ChangeColor: typeof import('./src/components/ChangeColor.vue')['default']
     ComponentBasis: typeof import('./src/components/ComponentBasis.vue')['default']
+    CompositionComputed: typeof import('./src/components/CompositionComputed.vue')['default']
     ComputedProperties: typeof import('./src/components/ComputedProperties.vue')['default']
     DebouncingExample: typeof import('./src/components/DebouncingExample.vue')['default']
     DynamicProp: typeof import('./src/components/DynamicProp.vue')['default']
