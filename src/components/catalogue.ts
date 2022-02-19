@@ -54,5 +54,10 @@ export const catalogue: Catalogue[] = [
     title: 'vue3组合式API计算属性',
     date: '2022-2-18',
     path: '/vue3-computed'
+  },
+  {
+    title: 'vue3组合式API监听器',
+    date: '2022-2-19',
+    path: '/vue3-watchers'
   }
 ];

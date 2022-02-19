@@ -10,6 +10,7 @@ import Watcher from "../src/components/Watcher.vue";
 import ReactiveRef from "../src/components/ReactiveRef.vue";
 import SlotExample from "../src/components/SlotExample.vue"
 import CompositionComputed from "../src/components/CompositionComputed.vue"
+import CompositionWatchers from "../src/components/CompositionWatchers.vue"
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
@@ -60,6 +61,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/vue3-computed',
     component: CompositionComputed
+  },
+  {
+    path: '/vue3-watchers',
+    component: CompositionWatchers
   }
 ];
 
